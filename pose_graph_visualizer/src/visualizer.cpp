@@ -195,7 +195,6 @@ void Visualizer::visualize() {
     m.pose.orientation.w = 1.0;
 
     int id_base = 100;
-    int counter = 0;
     for (const auto &keyedPose : keyed_poses_) {
       m.pose = keyedPose.second;
       // Display text for the node
