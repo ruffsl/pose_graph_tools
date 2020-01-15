@@ -14,7 +14,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 
 find_package(rclcpp REQUIRED)
-find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
 find_package(pose_graph_msgs REQUIRED)
@@ -38,7 +37,6 @@ add_library(${library_name} SHARED
 set(dependencies
   geometry_msgs
   rclcpp
-  std_msgs
   visualization_msgs
   pose_graph_msgs
   interactive_markers

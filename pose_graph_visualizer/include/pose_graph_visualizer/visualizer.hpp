@@ -3,7 +3,6 @@
 
 #include "rclcpp/rclcpp.hpp"
 
-#include "std_msgs/msg/string.hpp"
 #include "geometry_msgs/msg/point.hpp"
 #include "visualization_msgs/msg/marker.hpp"
 
