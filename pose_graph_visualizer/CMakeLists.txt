@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(pose_graph_tools)
+project(pose_graph_visualizer)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -12,25 +12,12 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 find_package(ament_cmake REQUIRED)
-find_package(builtin_interfaces REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
 
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
+find_package(pose_graph_msgs REQUIRED)
 find_package(interactive_markers REQUIRED)
-
-set(msg_files
-  "msg/PoseGraph.msg"
-  "msg/PoseGraphEdge.msg"
-  "msg/PoseGraphNode.msg")
-
-rosidl_generate_interfaces(${PROJECT_NAME}
-  ${msg_files}
-  DEPENDENCIES
-  builtin_interfaces
-  std_msgs
-  geometry_msgs)
 
 # cs_add_library(${PROJECT_NAME}
 #   src/visualizer.cpp
